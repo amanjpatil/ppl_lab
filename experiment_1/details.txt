@@ -1,0 +1,3 @@
+In this program we used "stdio.h" header file ,while coontain pre-defined functions.
+In  program  "void"represent the return type of the main function .
+The "printf()" function inside main function will print the text inside it.
