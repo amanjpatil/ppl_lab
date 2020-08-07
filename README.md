@@ -1,3 +1,8 @@
 # ppl_lab
-hello world program
-mis -111903135
+<b> list of experiment</b>
+Mis -111903135
+
+
+Exp 1- hello world program.
+
+
