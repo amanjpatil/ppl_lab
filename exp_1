@@ -1,3 +1,0 @@
-in this program we use header file "stdio.h"
-here the  "void" represent the return type of main fuction .
-Inside the main function the "printf()" function will print hello world text .....
