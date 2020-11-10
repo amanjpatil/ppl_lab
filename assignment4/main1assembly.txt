@@ -1,0 +1,8 @@
+Dump of assembler code for function main:
+   0x0000000000001125 <+0>:	push   %rbp
+   0x0000000000001126 <+1>:	mov    %rsp,%rbp
+   0x0000000000001129 <+4>:	mov    $0x0,%eax
+   0x000000000000112e <+9>:	pop    %rbp
+   0x000000000000112f <+10>:	retq   
+End of assembler dump.
+
