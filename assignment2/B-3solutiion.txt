@@ -1,0 +1,31 @@
+B-3.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+main():
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 83 ec 10          	sub    $0x10,%rsp
+   8:	c7 45 fc 04 00 00 00 	movl   $0x4,-0x4(%rbp)
+   f:	eb 13                	jmp    24 <main+0x24>
+  11:	83 7d fc 03          	cmpl   $0x3,-0x4(%rbp)
+  15:	7f 06                	jg     1d <main+0x1d>
+  17:	83 45 f8 02          	addl   $0x2,-0x8(%rbp)
+  1b:	eb 03                	jmp    20 <main+0x20>
+  1d:	d1 65 f8             	shll   -0x8(%rbp)
+  20:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
+  24:	83 7d fc 63          	cmpl   $0x63,-0x4(%rbp)
+  28:	7e e7                	jle    11 <main+0x11>
+  2a:	8b 55 f8             	mov    -0x8(%rbp),%edx
+  2d:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  30:	89 c6                	mov    %eax,%esi
+  32:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 39 <main+0x39>
+			35: R_X86_64_PC32	.rodata-0x4
+  39:	b8 00 00 00 00       	mov    $0x0,%eax
+  3e:	e8 00 00 00 00       	callq  43 <main+0x43>
+			3f: R_X86_64_PLT32	printf-0x4
+  43:	b8 00 00 00 00       	mov    $0x0,%eax
+  48:	c9                   	leaveq 
+  49:	c3                   	retq  

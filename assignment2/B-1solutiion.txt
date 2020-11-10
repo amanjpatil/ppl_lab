@@ -1,0 +1,29 @@
+B-1.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <AddTwo>:
+AddTwo():
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	89 7d fc             	mov    %edi,-0x4(%rbp)
+   7:	83 45 fc 02          	addl   $0x2,-0x4(%rbp)
+   b:	8b 45 fc             	mov    -0x4(%rbp),%eax
+   e:	5d                   	pop    %rbp
+   f:	c3                   	retq   
+
+0000000000000010 <main>:
+main():
+  10:	55                   	push   %rbp
+  11:	48 89 e5             	mov    %rsp,%rbp
+  14:	48 83 ec 10          	sub    $0x10,%rsp
+  18:	c7 45 fc 03 00 00 00 	movl   $0x3,-0x4(%rbp)
+  1f:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  22:	89 c7                	mov    %eax,%edi
+  24:	e8 00 00 00 00       	callq  29 <main+0x19>
+			25: R_X86_64_PLT32	AddTwo-0x4
+  29:	89 45 fc             	mov    %eax,-0x4(%rbp)
+  2c:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  2f:	c9                   	leaveq 
+  30:	c3                   	retq  

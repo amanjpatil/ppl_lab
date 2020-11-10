@@ -1,0 +1,35 @@
+A-2.o:     file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000000 <f>:
+f():
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	8b 05 00 00 00 00    	mov    0x0(%rip),%eax        # a <f+0xa>
+			6: R_X86_64_PC32	Z-0x4
+   a:	89 45 f4             	mov    %eax,-0xc(%rbp)
+   d:	83 7d f4 09          	cmpl   $0x9,-0xc(%rbp)
+  11:	7f 10                	jg     23 <f+0x23>
+  13:	c7 45 fc 05 00 00 00 	movl   $0x5,-0x4(%rbp)
+  1a:	c7 45 f8 11 00 00 00 	movl   $0x11,-0x8(%rbp)
+  21:	eb 1b                	jmp    3e <f+0x3e>
+  23:	c7 45 fc 06 00 00 00 	movl   $0x6,-0x4(%rbp)
+  2a:	c7 45 f8 14 00 00 00 	movl   $0x14,-0x8(%rbp)
+  31:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+  35:	75 07                	jne    3e <f+0x3e>
+  37:	c7 45 f8 00 00 00 00 	movl   $0x0,-0x8(%rbp)
+  3e:	8b 55 fc             	mov    -0x4(%rbp),%edx
+  41:	89 d0                	mov    %edx,%eax
+  43:	c1 e0 02             	shl    $0x2,%eax
+  46:	01 d0                	add    %edx,%eax
+  48:	01 c0                	add    %eax,%eax
+  4a:	89 c2                	mov    %eax,%edx
+  4c:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  4f:	01 d0                	add    %edx,%eax
+  51:	89 05 00 00 00 00    	mov    %eax,0x0(%rip)        # 57 <f+0x57>
+			53: R_X86_64_PC32	Z-0x4
+  57:	90                   	nop
+  58:	5d                   	pop    %rbp
+  59:	c3                   	retq   
+
