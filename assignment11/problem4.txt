@@ -1,0 +1,8 @@
+1)The original code showed  two computations ,but the fre pass was able to reuse the temporary variable which stored result of the initial computation of (a+c).Thus , one line of execution eas saved ,and si was the use of an extra variable .
+
+2)Check the files B-4.c.*optimized.This is the last GIMPLE intra -procedural pass .If it is same as the output of fre ,then no more optimizationn have occured .
+
+3)To make computation of b meanningful return b is required .If return b is replaced by return 0 then GCC will realise that  entire computation of variable b was dead code.
+
+
+

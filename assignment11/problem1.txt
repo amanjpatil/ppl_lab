@@ -1,0 +1,40 @@
+gimple:
+main ()
+{
+  int a;
+  int b;
+  int c;
+  int p;
+  int q;
+  double r;
+
+  p = 6;
+  a = 10;
+  b = 20;
+  _1 = a * b;
+  c = _1 + 25;
+  p = 6;
+  q = Z;
+  r = 3.45e+1;
+  _2 = (int) r;
+  Z = _2;
+  Z.0_3 = Z;
+  _4 = Z.0_3 + 1;
+  Z = _4;
+}
+//question-ans:
+1)Each decleration is displayed on a new line .Multiple delcered variable are displayed on a new line in thesame sequence.the global decleration is  displayed in the main() activity.
+
+2)In gimple ,each row contain only one operation .For complex experation ,temporary variable is introduce to splite it into simple statement .When ther is more then one operation in the same row .temporary variable is introduced.
+
+3)A double in GIMPLE is represent in terms of (e+1).When double is assigned to integer, double is first converted into integer data type and assigned to a temporary variable and then the value in temporary variable(_2) is assigned to integer variable(z).
+
+4)Reading/writing  from/to global variables required  a memory load or store operationn .As GIMPLE ,statement can have at most one operation ,the only type of statement involving globals are of the form "global "="local" or "local"="global".this is because while local variable of a procedure can reside entirely in register ,every read/write  to global variables must refer to main memory as they can be accessed by other entities .Hence any operation on global variable has to go through an indirection of a temporary version of the the global inside register .Global temporaries are named similar to the global variable but with a numeric suffix.
+
+
+
+
+
+
+
+

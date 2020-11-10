@@ -1,0 +1,2 @@
+1)the variable "a" will take vale from 4 to 100.the if staatement never be true for given loop.
+
