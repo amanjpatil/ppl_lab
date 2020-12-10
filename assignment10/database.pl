@@ -7,7 +7,7 @@ teaches_subject(t5,chemistry).
 has_subject(maths_dpt,ode-mvc).
 has_subject(comp_dpt,dsgt).
 has_subject(comp_dpt,ppl).
-has_subject(comp_dpt,CN).
+has_subject(comp_dpt,dtl).
 has_subject(app_sc,chemistry).
 
 has_student(comp_dpt,s1).
